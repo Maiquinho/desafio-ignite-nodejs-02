@@ -1,2 +1,9 @@
+# Dependencies
 node_modules
-db/app.sql
+
+# Database
+db/*.db
+
+# Environment
+.env
+.env.test
