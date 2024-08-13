@@ -2,10 +2,10 @@ import type { Knex } from 'knex'
 
 export async function up(knex: Knex): Promise<void> {
   await knex.schema.alterTable('users', (table) => {
-    table.integer('meals_amount')
-    table.integer('diet_meals')
-    table.integer('off_diet_meals')
-    table.integer('best_diet_meal_sequence')
+    table.integer('meals_amount').notNullable().defaultTo(0)
+    table.integer('diet_meals').notNullable().defaultTo(0)
+    table.integer('off_diet_meals').notNullable().defaultTo(0)
+    table.integer('best_diet_meal_sequence').notNullable().defaultTo(0)
   })
 }
 
